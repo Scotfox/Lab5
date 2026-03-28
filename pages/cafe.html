@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Розклад кафе - Лаба 4</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+        font-family: sans-serif;
+      }
+      th,
+      td {
+        border: 2px solid #2c3e50;
+        padding: 12px;
+        text-align: center;
+      }
+      thead th {
+        background-color: #f39c12;
+        color: white;
+      }
+      tbody th {
+        background-color: #ecf0f1;
+      }
+      caption {
+        font-size: 1.8em;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #e67e22;
+      }
+      .special {
+        background-color: #f1c40f;
+        font-weight: bold;
+      }
+      .cleaning {
+        background-color: #bdc3c7;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Лабораторна робота 4 - Таблиці</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Головна</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <table>
+          <caption>
+            Меню та розклад студентського кафе "Залік"
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Частина дня</th>
+              <th scope="col">Понеділок</th>
+              <th scope="col">Вівторок</th>
+              <th scope="col">Середа</th>
+              <th scope="col">Четвер</th>
+              <th scope="col">П'ятниця</th>
+              <th scope="col">Субота</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Ранок</th>
+              <td>Сирники зі сметаною</td>
+              <td>Омлет з беконом</td>
+              <td>Вівсянка з ягодами</td>
+              <td>Млинці з сиром</td>
+              <td>Круасан + Кава</td>
+              <td>Сендвіч + Чай</td>
+            </tr>
+            <tr>
+              <th scope="row">Обід</th>
+              <td colspan="2" class="special">
+                Акція: Борщ + Пампушки (2 за ціною 1)
+              </td>
+              <td>Солянка м'ясна</td>
+              <td rowspan="2" class="special">
+                Італійський день (Піца та Паста нон-стоп)
+              </td>
+              <td>Курячий бульйон</td>
+              <td rowspan="2" class="special">
+                День десертів (Безлімітні вафлі)
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Вечір</th>
+              <td>Пюре з котлетою</td>
+              <td>Гречка з гуляшем</td>
+              <td>Стейк з лосося</td>
+              <td>Бургер-меню</td>
+            </tr>
+            <tr>
+              <th scope="row">Після 20:00</th>
+              <td colspan="6" class="cleaning">
+                Санітарна година (Кафе зачинено)
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <br /><br />
+    <footer>
+      <p>&copy; 2026. Студентське кафе "Залік". Всі права захищені.</p>
+    </footer>
+  </body>
+</html>

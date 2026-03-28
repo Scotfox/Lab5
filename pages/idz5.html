@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Індивідуальне Лаба 5 - Варіант 6</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f9f9f9;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      nav ul li {
+        display: inline;
+        margin-right: 15px;
+      }
+      section {
+        background-color: #ffffff;
+        border: 1px solid #cccccc;
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+      fieldset {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Індивідуальні завдання (Варіант 6)</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Головна</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Завдання 6: Бронювання готельного номера</h2>
+        <form action="#" method="POST">
+          <p>
+            <label for="checkin">Дата заїзду:</label><br />
+            <input type="date" id="checkin" name="checkin" required />
+          </p>
+
+          <p>
+            <label for="checkout">Дата виїзду:</label><br />
+            <input type="date" id="checkout" name="checkout" required />
+          </p>
+
+          <p>
+            <label for="guests">Кількість гостей:</label><br />
+            <input
+              type="number"
+              id="guests"
+              name="guests"
+              min="1"
+              max="5"
+              value="1"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="room_type">Тип номера:</label><br />
+            <select id="room_type" name="room_type" required>
+              <option value="standard">Стандарт</option>
+              <option value="deluxe">Делюкс</option>
+              <option value="suite">Люкс</option>
+            </select>
+          </p>
+
+          <p>
+            <input type="checkbox" id="transfer" name="transfer" value="yes" />
+            <label for="transfer">Потребує трансферу з аеропорту</label>
+          </p>
+
+          <p>
+            <button type="submit">Забронювати номер</button>
+            <button type="reset">Очистити</button>
+          </p>
+        </form>
+      </section>
+
+      <section>
+        <h2>Завдання 12: Багатоступенева віза-анкета</h2>
+        <form action="#" method="POST" enctype="multipart/form-data">
+          <fieldset>
+            <legend>Блок 1: Паспортні дані</legend>
+            <p>
+              <label for="pass_series">Серія паспорта:</label><br />
+              <input
+                type="text"
+                id="pass_series"
+                name="pass_series"
+                placeholder="Наприклад: FT"
+                pattern="[A-Za-z]{2}"
+                required
+              />
+            </p>
+            <p>
+              <label for="pass_num">Номер паспорта:</label><br />
+              <input
+                type="text"
+                id="pass_num"
+                name="pass_num"
+                placeholder="Наприклад: 123456"
+                pattern="[0-9]{6}"
+                required
+              />
+            </p>
+            <p>
+              <label for="issue_date">Дата видачі:</label><br />
+              <input type="date" id="issue_date" name="issue_date" required />
+            </p>
+            <p>
+              <label for="authority">Орган видачі:</label><br />
+              <input
+                type="text"
+                id="authority"
+                name="authority"
+                placeholder="Наприклад: 6311"
+                required
+              />
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Блок 2: Деталі поїздки</legend>
+            <p>
+              <label for="purpose">Мета поїздки:</label><br />
+              <input
+                type="text"
+                id="purpose"
+                name="purpose"
+                placeholder="Туризм, Бізнес, Навчання..."
+                required
+              />
+            </p>
+            <p>
+              <label for="visa_start">Дата в'їзду (не в минулому):</label><br />
+              <input
+                type="date"
+                id="visa_start"
+                name="visa_start"
+                min="2026-03-28"
+                required
+              />
+            </p>
+            <p>
+              <label for="visa_end">Дата виїзду:</label><br />
+              <input
+                type="date"
+                id="visa_end"
+                name="visa_end"
+                min="2026-03-28"
+                required
+              />
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Блок 3: Фінансове забезпечення</legend>
+            <p>Оберіть джерело доходів:</p>
+            <p>
+              <input
+                type="radio"
+                id="inc_salary"
+                name="income"
+                value="salary"
+                required
+              />
+              <label for="inc_salary">Заробітна плата</label><br />
+
+              <input
+                type="radio"
+                id="inc_savings"
+                name="income"
+                value="savings"
+              />
+              <label for="inc_savings">Особисті заощадження</label><br />
+
+              <input
+                type="radio"
+                id="inc_sponsor"
+                name="income"
+                value="sponsor"
+              />
+              <label for="inc_sponsor">Спонсорство</label>
+            </p>
+
+            <p>
+              <label for="bank_statement"
+                >Завантажте виписку з банку (тільки PDF або DOC):</label
+              ><br />
+              <input
+                type="file"
+                id="bank_statement"
+                name="bank_statement"
+                accept=".pdf,.doc,.docx"
+                required
+              />
+            </p>
+          </fieldset>
+
+          <p>
+            <button type="submit">Подати заявку на візу</button>
+            <button type="reset">Очистити анкету</button>
+          </p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

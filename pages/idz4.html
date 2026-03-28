@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Індивідуальне Лаба 4 - Варіант 6</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+      }
+      header nav ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        gap: 15px;
+        background: #2c3e50;
+        padding: 15px;
+        border-radius: 8px;
+      }
+      header nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      header nav ul li a:hover {
+        color: #f39c12;
+      }
+      section {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        margin-bottom: 40px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+      }
+      caption {
+        font-size: 1.6em;
+        font-weight: bold;
+        color: #2c3e50;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .calendar th,
+      .calendar td {
+        border: 1px solid #dee2e6;
+        width: 14.28%;
+      }
+      .calendar thead th {
+        background-color: #34495e;
+        color: white;
+        padding: 15px;
+        font-size: 1.1em;
+      }
+      .calendar td {
+        height: 120px;
+        vertical-align: top;
+        text-align: left;
+        padding: 10px;
+        position: relative;
+      }
+      .calendar td:hover {
+        background-color: #f1f3f5;
+      }
+      .date-num {
+        font-weight: bold;
+        font-size: 1.2em;
+        color: #7f8c8d;
+        display: block;
+        margin-bottom: 8px;
+      }
+      .empty-cell {
+        background-color: #f8f9fa;
+        background-image: repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 10px,
+          #f1f3f5 10px,
+          #f1f3f5 20px
+        );
+      }
+      .event {
+        background-color: #e74c3c;
+        color: white;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 0.85em;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      .event.green {
+        background-color: #27ae60;
+      }
+      .event.blue {
+        background-color: #2980b9;
+      }
+
+      .matrix th,
+      .matrix td {
+        border: 1px solid #bdc3c7;
+        padding: 12px;
+        text-align: center;
+      }
+      .matrix thead th {
+        background-color: #2980b9;
+        color: white;
+      }
+      .matrix thead tr:nth-child(2) th {
+        background-color: #3498db;
+      }
+      .matrix thead tr:nth-child(3) th {
+        background-color: #5dade2;
+        font-size: 0.9em;
+      }
+      .matrix tbody th {
+        background-color: #ecf0f1;
+        color: #2c3e50;
+      }
+      .matrix tbody tr:hover {
+        background-color: #fcfdfd;
+      }
+      .position-cell {
+        background-color: #2c3e50 !important;
+        color: white !important;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        text-align: center;
+        font-size: 1.2em;
+        letter-spacing: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Індивідуальні завдання (Варіант 6)</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Головна</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <table class="calendar">
+          <caption>
+            Березень 2026 (Завдання 6: Календар)
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Понеділок</th>
+              <th scope="col">Вівторок</th>
+              <th scope="col">Середа</th>
+              <th scope="col">Четвер</th>
+              <th scope="col">П'ятниця</th>
+              <th scope="col">Субота</th>
+              <th scope="col">Неділя</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="6" class="empty-cell"></td>
+              <td><span class="date-num">1</span></td>
+            </tr>
+            <tr>
+              <td><span class="date-num">2</span></td>
+              <td><span class="date-num">3</span></td>
+              <td>
+                <span class="date-num">4</span>
+                <div class="event blue">Лекція Web</div>
+              </td>
+              <td><span class="date-num">5</span></td>
+              <td>
+                <span class="date-num">6</span>
+                <div class="event">Здача Лаби №3</div>
+              </td>
+              <td><span class="date-num">7</span></td>
+              <td>
+                <span class="date-num">8</span>
+                <div class="event green">Міжнародний жіночий день</div>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="date-num">9</span></td>
+              <td><span class="date-num">10</span></td>
+              <td>
+                <span class="date-num">11</span>
+                <div class="event blue">Лекція Web</div>
+              </td>
+              <td><span class="date-num">12</span></td>
+              <td><span class="date-num">13</span></td>
+              <td><span class="date-num">14</span></td>
+              <td><span class="date-num">15</span></td>
+            </tr>
+            <tr>
+              <td><span class="date-num">16</span></td>
+              <td><span class="date-num">17</span></td>
+              <td><span class="date-num">18</span></td>
+              <td><span class="date-num">19</span></td>
+              <td>
+                <span class="date-num">20</span>
+                <div class="event">Здача Лаби №4</div>
+              </td>
+              <td><span class="date-num">21</span></td>
+              <td><span class="date-num">22</span></td>
+            </tr>
+            <tr>
+              <td><span class="date-num">23</span></td>
+              <td><span class="date-num">24</span></td>
+              <td>
+                <span class="date-num">25</span>
+                <div class="event blue">Рубіжний контроль</div>
+              </td>
+              <td><span class="date-num">26</span></td>
+              <td><span class="date-num">27</span></td>
+              <td><span class="date-num">28</span></td>
+              <td><span class="date-num">29</span></td>
+            </tr>
+            <tr>
+              <td><span class="date-num">30</span></td>
+              <td>
+                <span class="date-num">31</span>
+                <div class="event green">Кінець місяця</div>
+              </td>
+              <td colspan="5" class="empty-cell"></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <table class="matrix">
+          <caption>
+            Матриця компетенцій IT-відділу (Завдання 12)
+          </caption>
+          <thead>
+            <tr>
+              <th rowspan="3" scope="col">Посада</th>
+              <th rowspan="3" scope="col">ПІБ Співробітника</th>
+              <th colspan="4" scope="colgroup">Frontend Напрямок</th>
+              <th colspan="2" scope="colgroup">Backend Напрямок</th>
+            </tr>
+            <tr>
+              <th colspan="2" scope="colgroup">Технології: HTML / CSS</th>
+              <th colspan="2" scope="colgroup">Технології: JavaScript</th>
+              <th rowspan="2" scope="col">Технологія: Node.js</th>
+              <th rowspan="2" scope="col">Технологія: PostgreSQL</th>
+            </tr>
+            <tr>
+              <th scope="col">Рівень: Верстка</th>
+              <th scope="col">Рівень: Анімації</th>
+              <th scope="col">Рівень: Vanilla JS</th>
+              <th scope="col">Рівень: React</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th rowspan="2" scope="row" class="position-cell">JUNIOR</th>
+              <th scope="row">Іваненко Олексій</th>
+              <td>⭐⭐⭐</td>
+              <td>⭐</td>
+              <td>⭐⭐</td>
+              <td>⭐</td>
+              <td>⭐</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <th scope="row">Петренко Марія</th>
+              <td>⭐⭐⭐⭐</td>
+              <td>⭐⭐</td>
+              <td>⭐⭐⭐</td>
+              <td>⭐⭐</td>
+              <td>-</td>
+              <td>⭐</td>
+            </tr>
+            <tr>
+              <th rowspan="2" scope="row" class="position-cell">MIDDLE</th>
+              <th scope="row">Сидоренко Іван</th>
+              <td>⭐⭐⭐⭐⭐</td>
+              <td>⭐⭐⭐⭐</td>
+              <td>⭐⭐⭐⭐</td>
+              <td>⭐⭐⭐</td>
+              <td>⭐⭐</td>
+              <td>⭐⭐</td>
+            </tr>
+            <tr>
+              <th scope="row">Коваленко Анна</th>
+              <td>⭐⭐⭐⭐</td>
+              <td>⭐⭐⭐</td>
+              <td>⭐⭐⭐⭐⭐</td>
+              <td>⭐⭐⭐⭐</td>
+              <td>⭐⭐⭐</td>
+              <td>⭐</td>
+            </tr>
+            <tr>
+              <th scope="row" class="position-cell">SENIOR</th>
+              <th scope="row">Ткаченко Дмитро</th>
+              <td>⭐⭐⭐⭐⭐</td>
+              <td>⭐⭐⭐⭐⭐</td>
+              <td>⭐⭐⭐⭐⭐</td>
+              <td>⭐⭐⭐⭐⭐</td>
+              <td>⭐⭐⭐⭐⭐</td>
+              <td>⭐⭐⭐⭐</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>
